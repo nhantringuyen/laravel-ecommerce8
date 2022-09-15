@@ -1,0 +1,22 @@
+composer create-project --prefer-dist laravel/laravel:^8 laravel-ecommerce8
+composer require livewire/livewire
+php artisan make:livewire HomeComponent
+php artisan make:livewire ShopComponent
+php artisan make:livewire CartComponent
+php artisan make:livewire CheckoutComponent
+composer require laravel/jetstream
+php artisan jetstream:install livewire
+#composer require laravel/breeze:1.9.4
+#php artisan breeze:install
+npm install
+mpm run dev
+php artisan migrate
+php artisan make:middleware AuthAdmin
+php artisan make:livewire admin/AdminDashboardComponent
+php artisan make:livewire user/UserDashboardComponent
+php artisan make:model Category -m
+php artisan make:model Product -m
+php artisan migrate
+php artisan make:factory CategoryFactory --model=Category
+php artisan make:factory ProductFactory --model=Product
+php artisan db:seed
