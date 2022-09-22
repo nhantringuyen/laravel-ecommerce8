@@ -211,7 +211,7 @@
     </div>
 </header>
 
-{{$slot}}
+{{ $slot }}
 
 
 <footer id="footer">
